@@ -145,7 +145,7 @@ namespace OSRS_Dharok_Bot
 
                 LeftClick();
                 Console.WriteLine("clicked!");
-                lb_clicked.Text = (klik + 1).ToString();
+                lb_clicked.Text = (klik = klik + 1).ToString();
                 timer1.Stop();
 
             }
