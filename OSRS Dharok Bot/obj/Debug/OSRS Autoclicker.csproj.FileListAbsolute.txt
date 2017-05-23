@@ -1,0 +1,6 @@
+C:\Users\fam_e\Source\Repos\OSRS Dharok Bot\OSRS Dharok Bot\bin\Debug\OSRS Dharok Bot.exe.config
+C:\Users\fam_e\Source\Repos\OSRS Dharok Bot\OSRS Dharok Bot\obj\Debug\OSRS Dharok Bot.exe
+C:\Users\fam_e\Source\Repos\OSRS Dharok Bot\OSRS Dharok Bot\obj\Debug\OSRS Dharok Bot.pdb
+C:\Users\fam_e\Source\Repos\OSRS Dharok Bot\OSRS-clicker\OSRS Dharok Bot\bin\Debug\OSRS Dharok Bot.exe.config
+C:\Users\fam_e\Source\Repos\OSRS Dharok Bot\OSRS-clicker\OSRS Dharok Bot\obj\Debug\OSRS Dharok Bot.exe
+C:\Users\fam_e\Source\Repos\OSRS Dharok Bot\OSRS-clicker\OSRS Dharok Bot\obj\Debug\OSRS Dharok Bot.pdb
