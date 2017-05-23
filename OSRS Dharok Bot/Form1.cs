@@ -14,10 +14,13 @@ namespace OSRS_Dharok_Bot
         {
             InitializeComponent();
             r = new Random();
-            //dingen
+            
+            
         }
+        
         bool ding = true;
         Random r;
+        double timeleft;
         private async void btn_alch_Click(object sender, EventArgs e)
         {
             ding = true;
@@ -111,8 +114,10 @@ namespace OSRS_Dharok_Bot
             while (ding)
             {
                 int random = r.Next(100, 1000);
+                
+                lb_timer.Text = random.ToString();
                 await Task.Delay(random);
-
+                
                 Console.WriteLine(random);
                 LeftClick();
                 
@@ -121,6 +126,7 @@ namespace OSRS_Dharok_Bot
 
         private async void btn_guth_Click(object sender, EventArgs e)
         {
+            
             await nmz_guth();
         }
         private async Task nmz_guth()
@@ -129,15 +135,30 @@ namespace OSRS_Dharok_Bot
             await Task.Delay(5);
             ding = true;
             Random r = new Random();
+            timer1.Interval = 1000;
+            int klik = 0;
             while (ding)
             {
-                int random = r.Next(1000, 900000);
-                
-                await Task.Delay(random);
+                timer1.Start();
+                timeleft = r.Next(1000, 900000);
+                await Task.Delay(Convert.ToInt32(timeleft));
 
                 LeftClick();
                 Console.WriteLine("clicked!");
+                lb_clicked.Text = (klik + 1).ToString();
+                timer1.Stop();
 
+            }
+            
+        }
+        
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (timeleft > 0)
+            {
+                lb_timer.Text = Math.Round(timeleft / 1000).ToString();
+                timeleft = timeleft - 1000;
             }
         }
     }

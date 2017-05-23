@@ -28,12 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btn_alch = new System.Windows.Forms.Button();
             this.btn_stop = new System.Windows.Forms.Button();
             this.btn_nmz = new System.Windows.Forms.Button();
             this.btn_guth = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lb_timer = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label2 = new System.Windows.Forms.Label();
+            this.lb_clicked = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btn_alch
@@ -94,11 +98,35 @@
             this.lb_timer.TabIndex = 5;
             this.lb_timer.Text = "-";
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(108, 35);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(75, 13);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Times clicked:";
+            // 
+            // lb_clicked
+            // 
+            this.lb_clicked.AutoSize = true;
+            this.lb_clicked.Location = new System.Drawing.Point(185, 35);
+            this.lb_clicked.Name = "lb_clicked";
+            this.lb_clicked.Size = new System.Drawing.Size(10, 13);
+            this.lb_clicked.TabIndex = 7;
+            this.lb_clicked.Text = "-";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.lb_clicked);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.lb_timer);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_guth);
@@ -120,6 +148,9 @@
         private System.Windows.Forms.Button btn_guth;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lb_timer;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lb_clicked;
     }
 }
 
