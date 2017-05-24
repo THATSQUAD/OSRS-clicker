@@ -68,7 +68,7 @@ namespace OSRS_Dharok_Bot
             mouse_event(MOUSEEVENTF_LEFTUP, Control.MousePosition.X, Control.MousePosition.Y, 0, 0);
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btn_stop_Click(object sender, EventArgs e)
         {
             ding = false;
             
@@ -90,19 +90,24 @@ namespace OSRS_Dharok_Bot
         private async Task nmz()
         {
             ding = false;
-            await Task.Delay(5);
+            
             ding = true;
+            timer1.Interval = 1000;
+            int klik = 0;
             while (ding)
             {
-                int random = r.Next(1000, 50000);
-                await Task.Delay(random);
+                timer1.Start();
+                timeleft = r.Next(1000, 50000);
+                await Task.Delay(Convert.ToInt32(timeleft));
 
-                Console.WriteLine(random);
+                
                 LeftClick();
-                random = r.Next(100, 599);
-                await Task.Delay(random);
-                Console.WriteLine(random.ToString());
+                lb_clicked.Text = (klik = klik + 1).ToString();
+                timeleft = r.Next(100, 599);
+                await Task.Delay(Convert.ToInt32(timeleft));
+                Console.WriteLine(timeleft.ToString());
                 LeftClick();
+                timer1.Stop();
             }
         }
         private async Task alch()
@@ -152,7 +157,6 @@ namespace OSRS_Dharok_Bot
             
         }
         
-
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (timeleft > 0)
