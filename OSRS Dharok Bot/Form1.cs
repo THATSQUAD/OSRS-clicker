@@ -14,13 +14,18 @@ namespace OSRS_Dharok_Bot
         {
             InitializeComponent();
             r = new Random();
+            r2 = new Random();
             
-            
+
         }
         
         bool ding = true;
         Random r;
+        Random r2;
+        Random r3;
         double timeleft;
+        double kansVergroter1;
+        double kansVergroter2;
         private async void btn_alch_Click(object sender, EventArgs e)
         {
             ding = true;
@@ -62,12 +67,19 @@ namespace OSRS_Dharok_Bot
 
         // simulates a click-and-release action of the left mouse
         // button at its current position
+        private async Task LeftClickDelay()
+        {
+            int rnd = r.Next(50, 100);
+            mouse_event(MOUSEEVENTF_LEFTDOWN, Control.MousePosition.X, Control.MousePosition.Y, 0, 0);
+            await Task.Delay(rnd);
+            mouse_event(MOUSEEVENTF_LEFTUP, Control.MousePosition.X, Control.MousePosition.Y, 0, 0);
+        }
+
         public static void LeftClick()
         {
             mouse_event(MOUSEEVENTF_LEFTDOWN, Control.MousePosition.X, Control.MousePosition.Y, 0, 0);
             mouse_event(MOUSEEVENTF_LEFTUP, Control.MousePosition.X, Control.MousePosition.Y, 0, 0);
         }
-
         private void btn_stop_Click(object sender, EventArgs e)
         {
             ding = false;
@@ -87,8 +99,10 @@ namespace OSRS_Dharok_Bot
 
 
         }
+
         private async Task nmz()
         {
+            r3 = new Random();
             ding = false;
             
             ding = true;
@@ -96,18 +110,114 @@ namespace OSRS_Dharok_Bot
             int klik = 0;
             while (ding)
             {
-                timer1.Start();
-                timeleft = r.Next(1000, 50000);
-                await Task.Delay(Convert.ToInt32(timeleft));
+                kansVergroter1 = r2.Next(1, 10);
+               
+                if (kansVergroter1 > 5)
+                {
+                    timer1.Start();
+                    timeleft = r.Next(32000, 39000);
+                    await Task.Delay(Convert.ToInt32(timeleft));
 
+                    await LeftClickDelay();
+                    lb_clicked.Text = (klik = klik + 1).ToString();
+                    kansVergroter2 = r3.Next(1, 10);
+                    if (kansVergroter2 > 5)
+                    {
+                        timeleft = r.Next(251, 361);
+                        await Task.Delay(Convert.ToInt32(timeleft));
+                        Console.WriteLine(timeleft.ToString());
+                        await LeftClickDelay();
+                        timer1.Stop();
+                    }
+                    else if (kansVergroter2 >= 4 && kansVergroter2 <= 5)
+                    {
+                        timeleft = r.Next(201, 421);
+                        await Task.Delay(Convert.ToInt32(timeleft));
+                        Console.WriteLine(timeleft.ToString());
+                        await LeftClickDelay();
+                        timer1.Stop();
+                    }
+                    else
+                    {
+                        timeleft = r.Next(161, 597);
+                        await Task.Delay(Convert.ToInt32(timeleft));
+                        Console.WriteLine(timeleft.ToString());
+                        await LeftClickDelay();
+                        timer1.Stop();
+                    }                   
+
+                }
+                else if (kansVergroter1 >= 4 && kansVergroter1 <= 5)
+                {
+                    timer1.Start();
+                    timeleft = r.Next(26000, 44000);
+                    await Task.Delay(Convert.ToInt32(timeleft));
+
+                    await LeftClickDelay();
+                    lb_clicked.Text = (klik = klik + 1).ToString();
+                    kansVergroter2 = r3.Next(1, 10);
+                    if (kansVergroter2 > 5)
+                    {
+                        timeleft = r.Next(251, 361);
+                        await Task.Delay(Convert.ToInt32(timeleft));
+                        Console.WriteLine(timeleft.ToString());
+                        await LeftClickDelay();
+                        timer1.Stop();
+                    }
+                    else if (kansVergroter2 >= 4 && kansVergroter2 <= 5)
+                    {
+                        timeleft = r.Next(201, 421);
+                        await Task.Delay(Convert.ToInt32(timeleft));
+                        Console.WriteLine(timeleft.ToString());
+                        await LeftClickDelay();
+                        timer1.Stop();
+                    }
+                    else
+                    {
+                        timeleft = r.Next(161, 597);
+                        await Task.Delay(Convert.ToInt32(timeleft));
+                        Console.WriteLine(timeleft.ToString());
+                        await LeftClickDelay();
+                        timer1.Stop();
+                    }
+                }
+                else
+                {
+                    timer1.Start();
+                    timeleft = r.Next(1000, 50000);
+                    await Task.Delay(Convert.ToInt32(timeleft));
+
+                    await LeftClickDelay();
+                    lb_clicked.Text = (klik = klik + 1).ToString();
+                    kansVergroter2 = r3.Next(1, 10);
+                    if (kansVergroter2 > 5)
+                    {
+                        timeleft = r.Next(251, 361);
+                        await Task.Delay(Convert.ToInt32(timeleft));
+                        Console.WriteLine(timeleft.ToString());
+                        await LeftClickDelay();
+                        timer1.Stop();
+                    }
+                    else if (kansVergroter2 >= 4 && kansVergroter2 <= 5)
+                    {
+                        timeleft = r.Next(201, 421);
+                        await Task.Delay(Convert.ToInt32(timeleft));
+                        Console.WriteLine(timeleft.ToString());
+                        await LeftClickDelay();
+                        timer1.Stop();
+                    }
+                    else
+                    {
+                        timeleft = r.Next(161, 597);
+                        await Task.Delay(Convert.ToInt32(timeleft));
+                        Console.WriteLine(timeleft.ToString());
+                        await LeftClickDelay();
+                        timer1.Stop();
+                    }
+                }
                 
-                LeftClick();
-                lb_clicked.Text = (klik = klik + 1).ToString();
-                timeleft = r.Next(100, 599);
-                await Task.Delay(Convert.ToInt32(timeleft));
-                Console.WriteLine(timeleft.ToString());
-                LeftClick();
-                timer1.Stop();
+               
+                
             }
         }
         private async Task alch()
