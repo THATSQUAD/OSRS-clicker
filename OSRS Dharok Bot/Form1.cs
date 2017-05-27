@@ -100,6 +100,13 @@ namespace OSRS_Dharok_Bot
 
         }
 
+        private async Task wacht(int a, int b)
+        {
+            timeleft = r.Next(a, b);
+            await Task.Delay(Convert.ToInt32(timeleft));
+            await LeftClickDelay();
+        }
+
         private async Task nmz()
         {
             r3 = new Random();
@@ -115,34 +122,23 @@ namespace OSRS_Dharok_Bot
                 if (kansVergroter1 > 5)
                 {
                     timer1.Start();
-                    timeleft = r.Next(32000, 39000);
-                    await Task.Delay(Convert.ToInt32(timeleft));
-
-                    await LeftClickDelay();
+                    await wacht(32000, 39000);
+    
                     lb_clicked.Text = (klik = klik + 1).ToString();
                     kansVergroter2 = r3.Next(1, 10);
                     if (kansVergroter2 > 5)
                     {
-                        timeleft = r.Next(251, 361);
-                        await Task.Delay(Convert.ToInt32(timeleft));
-                        Console.WriteLine(timeleft.ToString());
-                        await LeftClickDelay();
+                        await wacht(251, 361);                    
                         timer1.Stop();
                     }
                     else if (kansVergroter2 >= 4 && kansVergroter2 <= 5)
                     {
-                        timeleft = r.Next(201, 421);
-                        await Task.Delay(Convert.ToInt32(timeleft));
-                        Console.WriteLine(timeleft.ToString());
-                        await LeftClickDelay();
+                        await wacht(201, 421);                        
                         timer1.Stop();
                     }
                     else
                     {
-                        timeleft = r.Next(161, 597);
-                        await Task.Delay(Convert.ToInt32(timeleft));
-                        Console.WriteLine(timeleft.ToString());
-                        await LeftClickDelay();
+                        await wacht(161, 597);                      
                         timer1.Stop();
                     }                   
 
@@ -150,68 +146,46 @@ namespace OSRS_Dharok_Bot
                 else if (kansVergroter1 >= 4 && kansVergroter1 <= 5)
                 {
                     timer1.Start();
-                    timeleft = r.Next(26000, 44000);
-                    await Task.Delay(Convert.ToInt32(timeleft));
-
-                    await LeftClickDelay();
+                    await wacht(26000, 44000);
+                   
                     lb_clicked.Text = (klik = klik + 1).ToString();
                     kansVergroter2 = r3.Next(1, 10);
                     if (kansVergroter2 > 5)
                     {
-                        timeleft = r.Next(251, 361);
-                        await Task.Delay(Convert.ToInt32(timeleft));
-                        Console.WriteLine(timeleft.ToString());
-                        await LeftClickDelay();
+                        await wacht(251, 361);                     
                         timer1.Stop();
                     }
                     else if (kansVergroter2 >= 4 && kansVergroter2 <= 5)
                     {
-                        timeleft = r.Next(201, 421);
-                        await Task.Delay(Convert.ToInt32(timeleft));
-                        Console.WriteLine(timeleft.ToString());
-                        await LeftClickDelay();
+                        await wacht(201, 421);                      
                         timer1.Stop();
                     }
                     else
                     {
-                        timeleft = r.Next(161, 597);
-                        await Task.Delay(Convert.ToInt32(timeleft));
-                        Console.WriteLine(timeleft.ToString());
-                        await LeftClickDelay();
+                        await wacht(161, 597);                      
                         timer1.Stop();
                     }
                 }
                 else
                 {
                     timer1.Start();
-                    timeleft = r.Next(1000, 50000);
-                    await Task.Delay(Convert.ToInt32(timeleft));
-
-                    await LeftClickDelay();
+                    await wacht(1000, 50000);
+                   
                     lb_clicked.Text = (klik = klik + 1).ToString();
                     kansVergroter2 = r3.Next(1, 10);
                     if (kansVergroter2 > 5)
                     {
-                        timeleft = r.Next(251, 361);
-                        await Task.Delay(Convert.ToInt32(timeleft));
-                        Console.WriteLine(timeleft.ToString());
-                        await LeftClickDelay();
+                        await wacht(251, 361);                       
                         timer1.Stop();
                     }
                     else if (kansVergroter2 >= 4 && kansVergroter2 <= 5)
                     {
-                        timeleft = r.Next(201, 421);
-                        await Task.Delay(Convert.ToInt32(timeleft));
-                        Console.WriteLine(timeleft.ToString());
-                        await LeftClickDelay();
+                        await wacht(201, 421);                       
                         timer1.Stop();
                     }
                     else
                     {
-                        timeleft = r.Next(161, 597);
-                        await Task.Delay(Convert.ToInt32(timeleft));
-                        Console.WriteLine(timeleft.ToString());
-                        await LeftClickDelay();
+                        await wacht(161, 597);                       
                         timer1.Stop();
                     }
                 }
