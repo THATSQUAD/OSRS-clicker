@@ -43,7 +43,6 @@ C:\Users\siemj\Documents\github\a\OSRS-clicker\OSRS Dharok Bot\bin\Debug\Microso
 C:\Users\siemj\Documents\github\a\OSRS-clicker\OSRS Dharok Bot\bin\Debug\Microsoft.VisualStudio.TestTools.UITest.Extension.xml
 C:\Users\siemj\Documents\github\a\OSRS-clicker\OSRS Dharok Bot\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
 C:\Users\siemj\Documents\github\a\OSRS-clicker\OSRS Dharok Bot\bin\Debug\Microsoft.VisualStudio.QualityTools.Common.xml
-C:\Users\siemj\Documents\github\a\OSRS-clicker\OSRS Dharok Bot\obj\Debug\OSRS Autoclicker.csprojResolveAssemblyReference.cache
 C:\Users\siemj\Documents\github\a\OSRS-clicker\OSRS Dharok Bot\obj\Debug\OSRS_Dharok_Bot.Form1.resources
 C:\Users\siemj\Documents\github\a\OSRS-clicker\OSRS Dharok Bot\obj\Debug\OSRS_Dharok_Bot.Properties.Resources.resources
 C:\Users\siemj\Documents\github\a\OSRS-clicker\OSRS Dharok Bot\obj\Debug\OSRS Autoclicker.csproj.GenerateResource.Cache
