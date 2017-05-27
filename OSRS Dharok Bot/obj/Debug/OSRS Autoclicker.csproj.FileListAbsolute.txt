@@ -48,3 +48,4 @@ C:\Users\siemj\Documents\github\a\OSRS-clicker\OSRS Dharok Bot\obj\Debug\OSRS_Dh
 C:\Users\siemj\Documents\github\a\OSRS-clicker\OSRS Dharok Bot\obj\Debug\OSRS Autoclicker.csproj.GenerateResource.Cache
 C:\Users\siemj\Documents\github\a\OSRS-clicker\OSRS Dharok Bot\obj\Debug\OSRS Dharok Bot.exe
 C:\Users\siemj\Documents\github\a\OSRS-clicker\OSRS Dharok Bot\obj\Debug\OSRS Dharok Bot.pdb
+C:\Users\siemj\Documents\github\a\OSRS-clicker\OSRS Dharok Bot\obj\Debug\OSRS Autoclicker.csprojResolveAssemblyReference.cache

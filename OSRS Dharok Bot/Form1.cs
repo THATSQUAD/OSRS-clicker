@@ -69,7 +69,7 @@ namespace OSRS_Dharok_Bot
         // button at its current position
         private async Task LeftClickDelay()
         {
-            int rnd = r.Next(50, 100);
+            int rnd = r.Next(48, 108);
             mouse_event(MOUSEEVENTF_LEFTDOWN, Control.MousePosition.X, Control.MousePosition.Y, 0, 0);
             await Task.Delay(rnd);
             mouse_event(MOUSEEVENTF_LEFTUP, Control.MousePosition.X, Control.MousePosition.Y, 0, 0);
@@ -107,6 +107,26 @@ namespace OSRS_Dharok_Bot
             await LeftClickDelay();
         }
 
+        private async Task randomClick()
+        {
+            kansVergroter2 = r3.Next(1, 10);
+            if (kansVergroter2 > 5)
+            {
+                await wacht(313, 407);
+                timer1.Stop();
+            }
+            else if (kansVergroter2 >= 4 && kansVergroter2 <= 5)
+            {
+                await wacht(253, 471);
+                timer1.Stop();
+            }
+            else
+            {
+                await wacht(152, 594);
+                timer1.Stop();
+            }
+
+        }
         private async Task nmz()
         {
             r3 = new Random();
@@ -122,72 +142,28 @@ namespace OSRS_Dharok_Bot
                 if (kansVergroter1 > 5)
                 {
                     timer1.Start();
-                    await wacht(32000, 39000);
+                    await wacht(33000, 41000);
     
                     lb_clicked.Text = (klik = klik + 1).ToString();
-                    kansVergroter2 = r3.Next(1, 10);
-                    if (kansVergroter2 > 5)
-                    {
-                        await wacht(251, 361);                    
-                        timer1.Stop();
-                    }
-                    else if (kansVergroter2 >= 4 && kansVergroter2 <= 5)
-                    {
-                        await wacht(201, 421);                        
-                        timer1.Stop();
-                    }
-                    else
-                    {
-                        await wacht(161, 597);                      
-                        timer1.Stop();
-                    }                   
+                    await randomClick();
 
                 }
                 else if (kansVergroter1 >= 4 && kansVergroter1 <= 5)
                 {
                     timer1.Start();
-                    await wacht(26000, 44000);
+                    await wacht(27000, 47000);
                    
                     lb_clicked.Text = (klik = klik + 1).ToString();
-                    kansVergroter2 = r3.Next(1, 10);
-                    if (kansVergroter2 > 5)
-                    {
-                        await wacht(251, 361);                     
-                        timer1.Stop();
-                    }
-                    else if (kansVergroter2 >= 4 && kansVergroter2 <= 5)
-                    {
-                        await wacht(201, 421);                      
-                        timer1.Stop();
-                    }
-                    else
-                    {
-                        await wacht(161, 597);                      
-                        timer1.Stop();
-                    }
+                    await randomClick();
+                   
                 }
                 else
                 {
                     timer1.Start();
-                    await wacht(1000, 50000);
+                    await wacht(1000, 54000);
                    
                     lb_clicked.Text = (klik = klik + 1).ToString();
-                    kansVergroter2 = r3.Next(1, 10);
-                    if (kansVergroter2 > 5)
-                    {
-                        await wacht(251, 361);                       
-                        timer1.Stop();
-                    }
-                    else if (kansVergroter2 >= 4 && kansVergroter2 <= 5)
-                    {
-                        await wacht(201, 421);                       
-                        timer1.Stop();
-                    }
-                    else
-                    {
-                        await wacht(161, 597);                       
-                        timer1.Stop();
-                    }
+                    await randomClick();
                 }
                 
                
